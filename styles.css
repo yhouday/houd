@@ -174,11 +174,21 @@ img:hover {
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   font-size: 0.9375rem; /* 15px */
-  color: #d46a6a;
+  color: #5a3e36 !important;
   font-family: 'Amiri', serif;
   text-align: right;
   direction: rtl;
 }
+
+.gallery-box, .gallery-box p {
+  color: #5a3e36 !important;
+}
+
+.review-box p {
+  color: #5a3e36 !important;
+}
+
+
 
 /* === Contact Section === */
 .main-contact-container {
