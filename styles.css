@@ -1,36 +1,43 @@
-
-.navbar .nav-link:hover {
-    color: gold !important;
-}
-
-
-.navbar .nav-link {
-    font-size: 1.1 rem; 
-}
-
-
-.navbar .nav-link.active {
-    color: gold !important; 
-    font-weight: bold;    
-}
-
-
+/* === Global Styles === */
 body {
   font-family: 'Cairo', sans-serif;
-  background-color: #ffe6f0	;
+  background-color: #ffe6f0;
   color: #333;
 }
 
-.section-heading {
-  padding-top: 80px;
+html {
+  font-size: 16px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, p {
+  direction: rtl;
   color: #CFAE6D;
 }
 
+.section-heading {
+  padding-top: 5rem;
+}
 
+/* === Navbar === */
+.navbar .nav-link {
+  font-size: 1.1rem;
+}
 
+.navbar .nav-link:hover {
+  color: gold !important;
+}
+
+.navbar .nav-link.active {
+  color: gold !important;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* === Image Styling === */
 img {
   width: 250px;
   margin: 10px;
@@ -43,14 +50,15 @@ img:hover {
   transform: scale(1.05);
 }
 
+/* === Golden Box === */
 .golden-box {
   max-width: 100%;
   margin: 20px auto;
-  padding: 25px 30px;
-  background-color: #ffe4f0; /* soft girly pink */
-  border: 0px solid #ff99cc; /* subtle pink border */
-  border-left: 40px solid #bfa24a; /* golden thick left border */
-  border-right: 40px solid #bfa24a; /* golden thick left border */
+  padding: 1.5rem 2rem;
+  background-color: #ffe4f0;
+  border: 0px solid #ff99cc;
+  border-left: 40px solid #bfa24a;
+  border-right: 40px solid #bfa24a;
   border-radius: 0 100px 0 100px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   font-family: 'Arial', sans-serif;
@@ -60,30 +68,38 @@ img:hover {
   letter-spacing: 0.02em;
   position: relative;
   overflow: hidden;
+  animation: fadeScaleIn 0.8s ease forwards;
 }
 
-
+/* === Sub Message === */
 .sub-message {
-  font-size: 15px;
+  font-size: 1rem; /* 13px */
   font-style: italic;
   color: #a7853a;
 }
 
-
+/* === WhatsApp Button === */
 .whatsapp-button {
   display: inline-block;
   background-color: #25D366;
   color: white;
-  font-size: 10 px;
+  font-size: 1rem; /* 12px */
   font-weight: bold;
-  padding: 10px 30px;
+  padding: 0.2rem 0.6rem; /* 10px 30px */
   border-radius: 50px;
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-top: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Animate the whole box on load */
+.whatsapp-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.7);
+  cursor: pointer;
+}
+
+/* === Animations === */
 @keyframes fadeScaleIn {
   0% {
     opacity: 0;
@@ -95,11 +111,6 @@ img:hover {
   }
 }
 
-.golden-box {
-  animation: fadeScaleIn 0.8s ease forwards;
-}
-
-/* Animate butterflies and hearts with a subtle bounce */
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
@@ -114,7 +125,6 @@ img:hover {
   animation: bounce 2s ease-in-out infinite;
 }
 
-/* Slightly different timing for butterfly so they don't sync exactly */
 .butterfly {
   animation-delay: 0s;
 }
@@ -127,117 +137,94 @@ img:hover {
   animation-delay: 0.6s;
 }
 
-/* WhatsApp button hover effect */
-.whatsapp-button {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.whatsapp-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.7);
-  cursor: pointer;
-}
-
+/* === About Section === */
 .about-section {
   background: linear-gradient(to right, #ffe6f0 ,  #fff5f5 );
-  padding: 10px 20px 10px 10px;;
+  padding: 0.3rem 1rem 0.3rem 0.3rem; /* 10px 20px 10px 10px */
   border-right: 8px solid #cdb4db;
-  border-radius: 0 0px 25px 0;
-  font-size: 20px;
+  border-radius: 0 0 25px 0;
+  font-size: clamp(1rem, 2vw, 1.125rem); /* 16px to 18px */
   line-height: 2.2;
   color: #3b3b3b;
-  margin-top: 40px;
+  margin-top: 10px;
   direction: rtl;
   text-align: right;
   font-family: 'Amiri', serif;
 }
 
 .about-heading {
-  font-size: 30px;
+  font-size: clamp(1.5rem, 4vw, 2.2rem); /* ~30px */
   color: #a7853a;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
   font-weight: bold;
 }
 
-
+/* === Highlight === */
 .highlight {
   color: #d4af37;
   font-weight: bold;
 }
 
-
-.navbar-nav {
-  direction: ltr !important;
-  text-align: left !important;
-}
-
-h1, h2, h3, p {
-  direction: rtl;
-}
-
-
+/* === Gallery Box === */
 .gallery-box {
   max-width: 100%;
-  margin-bottom: 20px;
-  padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+  padding: 0.625rem; /* 10px */
   background: linear-gradient(to right, #cdb4db ,  #fff5f5 );
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  font-size: 17px;
+  font-size: 0.9375rem; /* 15px */
   color: #d46a6a;
   font-family: 'Amiri', serif;
   text-align: right;
   direction: rtl;
 }
 
+/* === Contact Section === */
+.main-contact-container {
+  background-color: #fdf8f3;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
 
+.main-deco-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 7px;
+  background: linear-gradient(to bottom, #d4a373, #fff3e0);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
 
-  .main-contact-container {
-    background-color: #fdf8f3;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    direction: rtl;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-  }
+.contact-box {
+  flex: 1 1 250px;
+  background-color: #ffffff;
+  padding: 1.25rem 1.25rem 1.25rem 0.9375rem; /* 20px 20px 20px 15px */
+  border-radius: 10px;
+  border: 1px solid #eee;
+  text-align: right;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
 
-  .main-deco-bar {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 7px;
-    background: linear-gradient(to bottom, #d4a373, #fff3e0);
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-  }
+.contact-box:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
 
-  .contact-box {
-    flex: 1 1 250px;
-    background-color: #ffffff;
-    padding: 20px 20px 20px 15px;
-    border-radius: 10px;
-    border: 1px solid #eee;
-    text-align: right;
-    position: relative;
-    transition: box-shadow 0.3s ease;
-  }
-  
-
-  .contact-box:hover {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  }
-
-  .contact-bar {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 5px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
+.contact-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
